@@ -53,6 +53,7 @@ alias unsw='ssh z5256318@login.cse.unsw.edu.au'
 alias uq='ucp -g'
 alias cppf='find . -iname "*.h" -o -iname "*.cpp" | xargs clang-format -i'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias tm='tmux a -t'
 
 # Exports
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -73,3 +74,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# opam configuration
+[[ ! -r /home/nicholas_maiden/.opam/opam-init/init.zsh ]] || source /home/nicholas_maiden/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
