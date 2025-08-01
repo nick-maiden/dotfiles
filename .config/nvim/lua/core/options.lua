@@ -12,6 +12,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true -- assumes you want case-sensitive if you include mixed case
 
 vim.opt.cursorline = true
+vim.opt.guicursor = 'a:block'
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'

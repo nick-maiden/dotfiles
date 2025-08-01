@@ -42,7 +42,8 @@ return {
         "cpp",
         "haskell",
         "java",
-        "rust"
+        "rust",
+        "ocaml"
       },
       incremental_selection = {
         enable = true,

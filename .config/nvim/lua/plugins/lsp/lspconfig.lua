@@ -82,6 +82,7 @@ return {
           capabilities = capabilities,
         })
       end,
+
       ["emmet_ls"] = function()
         -- configure emmet language server
         lspconfig["emmet_ls"].setup({
@@ -89,6 +90,7 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
+
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({
@@ -104,6 +106,27 @@ return {
               },
             },
           },
+        })
+      end,
+
+      ["jdtls"] = function()
+        -- configure java language server
+        lspconfig["jdtls"].setup({
+          capabilities = capabilities,
+          settings = {
+            java = {
+              configuration = {
+                runtimes = {
+                  -- Add your Java runtime configurations here if needed
+                  -- Example:
+                  -- {
+                  --   name = "JavaSE-11",
+                  --   path = "/usr/lib/jvm/java-11-openjdk/",
+                  -- },
+                }
+              }
+            }
+          }
         })
       end,
     })

@@ -34,6 +34,11 @@ return {
         "lua_ls",
         "emmet_ls",
         "pyright",
+        "jsonls",
+        "jdtls",
+        "rust_analyzer",
+        "clangd",
+        -- "hls",
       },
     })
 
@@ -42,6 +47,9 @@ return {
         "prettier", -- prettier formatter
         "stylua",   -- lua formatter
         "eslint_d",
+        "rustfmt",
+        "clang-format",
+        -- "ormolu", -- haskell formatter
       },
     })
   end,
