@@ -1,56 +1,56 @@
 return {
-  "williamboman/mason.nvim",
+  'williamboman/mason.nvim',
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    'williamboman/mason-lspconfig.nvim',
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
   },
   config = function()
     -- import mason
-    local mason = require("mason")
+    local mason = require 'mason'
 
     -- import mason-lspconfig
-    local mason_lspconfig = require("mason-lspconfig")
+    local mason_lspconfig = require 'mason-lspconfig'
 
-    local mason_tool_installer = require("mason-tool-installer")
+    local mason_tool_installer = require 'mason-tool-installer'
 
     -- enable mason and configure icons
-    mason.setup({
+    mason.setup {
       ui = {
         icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗",
+          package_installed = '✓',
+          package_pending = '➜',
+          package_uninstalled = '✗',
         },
       },
-    })
+    }
 
-    mason_lspconfig.setup({
+    mason_lspconfig.setup {
       -- list of servers for mason to install
       ensure_installed = {
-        "tsserver",
-        "html",
-        "cssls",
-        "tailwindcss",
-        "lua_ls",
-        "emmet_ls",
-        "pyright",
-        "jsonls",
-        "jdtls",
-        "rust_analyzer",
-        "clangd",
+        'tsserver',
+        'html',
+        'cssls',
+        'tailwindcss',
+        'lua_ls',
+        'emmet_ls',
+        'pyright',
+        'jsonls',
+        'jdtls',
+        'rust_analyzer',
+        'clangd',
         -- "hls",
       },
-    })
+    }
 
-    mason_tool_installer.setup({
+    mason_tool_installer.setup {
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua",   -- lua formatter
-        "eslint_d",
-        "rustfmt",
-        "clang-format",
+        'prettier', -- prettier formatter
+        'stylua', -- lua formatter
+        'eslint_d',
+        'rustfmt',
+        'clang-format',
         -- "ormolu", -- haskell formatter
       },
-    })
+    }
   end,
 }
